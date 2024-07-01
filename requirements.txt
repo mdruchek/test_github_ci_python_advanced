@@ -26,5 +26,6 @@ pytest==8.2.2
 python-dateutil==2.9.0.post0
 six==1.16.0
 SQLAlchemy==2.0.31
+types-factory-boy==0.4.1
 typing_extensions==4.12.2
 Werkzeug==3.0.3
