@@ -2,8 +2,8 @@ import random
 
 import factory
 
-from my_proj.app.models import Client, Parking
-from my_proj.app.database import db
+from test_github_ci_python_advanced.app.models import Client, Parking
+from test_github_ci_python_advanced.app.database import db
 
 
 class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
