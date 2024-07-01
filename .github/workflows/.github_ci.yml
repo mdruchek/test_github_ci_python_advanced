@@ -25,4 +25,4 @@ jobs:
     - name: Checing the code with isort
       run: isort --check-only --profile black ../..
     - name: Cheking the code with flake8
-      run: flake8 .
+      run: flake8 ../..
