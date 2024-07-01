@@ -17,5 +17,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Testing the code with pytest
-      run: |
-        pytest tests
+      run: pytest tests
+    - name: Cheking the code with mypy
+      run: mypy ../..
+    - name: Cheking the code with black
+      run: black --diff --check ../..
+    - name: Checing the code with isort
+      run: isort --check-only --profile black ../..
+    - name: Cheking the code with flake8
+      run: flake8 .
