@@ -1,8 +1,4 @@
 from flask import Flask
-from flask_debugtoolbar import DebugToolbarExtension
-
-
-toolbar = DebugToolbarExtension()
 
 
 def create_app():
@@ -12,7 +8,6 @@ def create_app():
     app.config['SECRET_KEY'] = 'key'
     from .database import db
     db.init_app(app)
-    toolbar.init_app(app)
 
     from .models import Client, Parking, ClientParking
 
