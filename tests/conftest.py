@@ -2,11 +2,11 @@ import sys
 from datetime import datetime, timedelta
 
 import pytest
-sys.path.append('../../hw')
+sys.path.append('../test_github_ci_python_advanced')
 
-from my_proj.app import create_app
-from my_proj.app.database import db as _db
-from my_proj.app.models import Client, Parking, ClientParking
+from ../app import create_app
+from ../app.database import db as _db
+from ../app.models import Client, Parking, ClientParking
 
 
 @pytest.fixture
