@@ -4,9 +4,9 @@ from datetime import datetime, timedelta
 import pytest
 sys.path.append('../test_github_ci_python_advanced')
 
-from ..app import create_app
-from ..app.database import db as _db
-from ..app.models import Client, Parking, ClientParking
+from test_github_ci_python_advanced.app import create_app
+from test_github_ci_python_advanced.app.database import db as _db
+from test_github_ci_python_advanced.app.models import Client, Parking, ClientParking
 
 
 @pytest.fixture
