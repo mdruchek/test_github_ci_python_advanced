@@ -16,9 +16,7 @@ class ClientFactory(factory.alchemy.SQLAlchemyModelFactory):
     surname: factory.Faker = factory.Faker("last_name")
     car_number: factory.Faker = factory.Faker("license_plate")
     credit_card: factory.Faker | None = (
-        factory.Faker("credit_card_number")
-        if random.randint(0, 1) == 1
-        else None
+        factory.Faker("credit_card_number") if random.randint(0, 1) == 1 else None
     )
 
 
@@ -30,8 +28,6 @@ class ParkingFactory(factory.alchemy.SQLAlchemyModelFactory):
     address: factory.Faker = factory.Faker("address")
     opened: factory.Faker = factory.Faker("pybool")
     count_places: factory.Faker = factory.Faker("random_int", min=10, max=200)
-    count_available_places = (
-        factory.lazy_attribute(
-            lambda a: random.randint(0, a.count_places + 1)
-        )
+    count_available_places = factory.lazy_attribute(
+        lambda a: random.randint(0, a.count_places + 1)
     )

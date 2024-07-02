@@ -31,9 +31,7 @@ class Client(db.Model):
         return f"Клиент {self.name} {self.surname}"
 
     def to_json(self):
-        return {
-            col.name: getattr(self, col.name) for col in self.__table__.columns
-        }
+        return {col.name: getattr(self, col.name) for col in self.__table__.columns}
 
 
 class Parking(db.Model):
@@ -60,9 +58,7 @@ class Parking(db.Model):
         return f"Парковка {self.address}"
 
     def to_json(self):
-        return {
-            col.name: getattr(self, col.name) for col in self.__table__.column
-        }
+        return {col.name: getattr(self, col.name) for col in self.__table__.column}
 
 
 class ClientParking(db.Model):
@@ -90,6 +86,4 @@ class ClientParking(db.Model):
         return f"Клиент {self.client_id} место {self.parking_id}"
 
     def to_json(self):
-        return {
-            col.name: getattr(self, col.name) for col in self.__table__.columns
-        }
+        return {col.name: getattr(self, col.name) for col in self.__table__.columns}

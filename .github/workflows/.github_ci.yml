@@ -85,4 +85,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Cheking the code with flake8
-        run: flake8 ../..
+        run: flake8  --max-line-length 84 ../..

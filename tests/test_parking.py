@@ -4,11 +4,7 @@ import factory
 import pytest
 from sqlalchemy import func, select
 
-from test_github_ci_python_advanced.app.models import (
-    Client,
-    ClientParking,
-    Parking
-)
+from test_github_ci_python_advanced.app.models import Client, ClientParking, Parking
 
 from .factories import ClientFactory, ParkingFactory
 

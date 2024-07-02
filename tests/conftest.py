@@ -4,11 +4,7 @@ import pytest
 
 from test_github_ci_python_advanced.app import create_app
 from test_github_ci_python_advanced.app.database import db as _db
-from test_github_ci_python_advanced.app.models import (
-    Client,
-    ClientParking,
-    Parking
-)
+from test_github_ci_python_advanced.app.models import Client, ClientParking, Parking
 
 
 @pytest.fixture
