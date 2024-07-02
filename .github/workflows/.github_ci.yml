@@ -51,7 +51,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Checking the code with black
-        run: ls
+        run: black --diff --check *.py
   isort:
     runs-on: ubuntu-latest
     strategy:
