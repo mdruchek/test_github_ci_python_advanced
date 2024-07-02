@@ -34,7 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Checking the code with mypy
-        run: mypy ../../app/ ../../tests/ ../../main.py
+        run: mypy *.py app/*.py tests/*.py
   black:
     runs-on: ubuntu-latest
     strategy:
@@ -51,7 +51,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Checking the code with black
-        run: black --diff --check *.py
+        run: black --diff --check *.py app/*.py tests/*.py
   isort:
     runs-on: ubuntu-latest
     strategy:
@@ -68,7 +68,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Checking the code with isort
-        run: isort --check-only --profile black ../../app/ ../../tests/ ../../main.py
+        run: isort --check-only --profile black *.py app/*.py tests/*.py
   flake8:
     runs-on: ubuntu-latest
     strategy:
@@ -85,4 +85,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Checking the code with flake8
-        run: flake8  --max-line-length 84 ../../app/ ../../tests/ ../../main.py
+        run: flake8  --max-line-length 88 *.py app/*.py tests/*.py
