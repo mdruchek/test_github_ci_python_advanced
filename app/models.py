@@ -7,7 +7,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from .database import db, int_pk, str10, str50, str100
 
 
-class Client(db.Model):
+class Client(db.Model):  # type: ignore
     """
     Модель Client
 
@@ -34,7 +34,7 @@ class Client(db.Model):
         return {col.name: getattr(self, col.name) for col in self.__table__.columns}
 
 
-class Parking(db.Model):
+class Parking(db.Model):  # type: ignore
     """
     Модель Parking
 
@@ -61,7 +61,7 @@ class Parking(db.Model):
         return {col.name: getattr(self, col.name) for col in self.__table__.column}
 
 
-class ClientParking(db.Model):
+class ClientParking(db.Model):  # type: ignore
     """
     Модель ClientParking
 
