@@ -10,7 +10,7 @@ def create_app():
 
     db.init_app(app)
 
-    from .models import Client, ClientParking, Parking # noqa
+    from .models import Client, ClientParking, Parking  # noqa
 
     with app.app_context():
         db.drop_all()
